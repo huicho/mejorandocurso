@@ -1,0 +1,34 @@
+GRUPO,CAMPO2,CAMPO3,CAMPO4,ORDEN
+FILTROS,Año,Año del cual se quiere consultar la información,"2025, 2024",1
+FILTROS,Mes,Mes del cual se quiere consultar la información,"Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre",2
+FILTROS,Dia,Día del cual se quiere consultar la información,"09/06/2025, 10/06/2025, 11/06/2025",3
+FILTROS,Semana,Semana del cual se quiere consultar la información,"20, 21, 22 ,23",4
+FILTROS,Planta,Unidad Operativa de la cual se va a consultar la informacion,"Tepotzotlán, LDM Stills, LDM Dairy, Monterrey, Lerma, Pachuca, Zacatecas",5
+FILTROS,Área,"Plataforma a analizar, suele ser por tecnología","Hotfill, Laminado, UHT, Polietileno",6
+FILTROS,Línea,Líneas de producción de una plataforma o planta,"LINEAH01, LINEAH02, LINEAH03",7
+FILTROS,Tripulación,Clasificación de grupos de acuerdo al rol de turnos,"Grupo A, Grupo B, Grupo C, Grupo D",8
+FILTROS,Multi,Muestra u omite en el análisis las líneas de Multiempaque,"Si, No",9
+CONCEPTOS,Eficiencia de Línea,El indicador mide la cantidad de cajas producidas en la línea de producción con respecto al total de cajas teóricas que se debieron haber producido con base en la velocidad nominal de la línea.,Eficiencia = tiempo producción/tiempo relevante * 100,10
+CONCEPTOS,Tiempo de Producción,Es el tiempo durante el cual se debería llevar a cabo la producción de un producto.,Tiempo de producción [min]=Producción CF(Real)/Velocidad Nominal *60 min/hr,11
+CONCEPTOS,Tiempo Relevante de Eficiencia,Es la suma del tiempo en el cual se encuentra en uso la línea para producir.,"T. Relevante Eficiencia=
+                T. de Producción + P. Operativo + Cambio y Saneamientos +  
+                P. equipo de linea + P. Ajenos + P. Servicios Auxiliares
+T. Relevante Eficiencia=T. Total - Mantenimiento -P. Fin de Corrida . 
+                 Cambio de Orden - Paros Autorizados",12
+CONCEPTOS,Utilización de Línea,"El indicador mide el aprovechamiento de las líneas de envasado, referido al tiempo en que la línea se encuentra ocupada productivamente respecto al total de tiempo disponible para la línea.","Utilización= Tiempo Relevante Utilización/
+                       Tiempo Calendario Total * Numero de Lineas*100",13
+CONCEPTOS,Tiempo Relevante de Utilización: ,Es el tiempo en el cual la línea está siendo utilizada. (Se mide en minutos),"T. Relevante Utilización=
+                Tiempo Prod + P. Operativo + Cambio y Saneamientos +  
+                P. equipo de linea + P. Ajenos + P. Servicios Auxiliares + 
+               Mantenimiento
+T. Relevante Utilización=T. Total - Inicio Orden Anticipado - Paro Fin Corrida - Cambio de Orden",14
+CONCEPTOS,Tiempo Calendario Total,"Es el tiempo que teóricamente se tiene disponible para producir en la línea, este se define de acuerdo con los días transcurridos.","Ejemplo de cálculo de tiempo calendario mensual: 31 días* 24 horas del día * 60 minutos de cada hora = 44,640 minutos
+Ejemplo de cálculo de tiempo calendario semanal: 7 días* 24 horas del día * 60 minutos de cada hora = 10,080 minutos
+Ejemplo de cálculo de tiempo calendario diario: 1 días* 24 horas del día * 60 minutos de cada hora = 1,440 minutos",15
+CONCEPTOS,Número de líneas,Valor numérico de cantidad de líneas por planta o por área,# Lineas = Suma de líneas disponibles,16
+CONCEPTOS,Paros Operativos,"Son los paros causados por la operación de la Línea, por ejemplo, ajustes de producto, falta de personal, los cuales son imputables al personal, independientemente del área o departamento.",,17
+CONCEPTOS,Paros Equipos de Línea,"Son los paros de Línea originados por alguna falla en Equipos de la Línea, es decir los que ocurrieron durante el tiempo destinado a producir, estos deben estar respaldados por el Técnico de Mantenimiento de líneas en operación.",,18
+CONCEPTOS,Paros Ajenos,"Son aquellos paros de línea originados por causas externas a la operación en planta, por lo tanto, no controlables, como es la falta de energía eléctrica, paros por proveedor In-house o paro de líneas causadas por fenómenos naturales, por ejemplo, un temblor.",,19
+CONCEPTOS,Paros Servicios Auxiliares,"Son los paros de Línea originados por falta de algún insumo como agua (Tratamiento de Aguas) o vapor por falta de presión, etc.",,20
+CONCEPTOS,Cambios y Saneamientos,"Es el tiempo que se ocupa el proceso en piso para realizar los cambios de tamaño o formato, los cambios de sabor y los saneamientos a la Línea dentro del tiempo destinado para la producción.",,21
+CONCEPTOS,Mantenimiento Programado,Es el tiempo destinado para la realización de mantenimiento a las líneas de producción siendo este un tiempo estándar y autorizado previamente. No afecta la eficiencia,,22
